@@ -37,14 +37,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "12",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
+        "x": 230,
         "y": 180,
         "wires": [
             [
@@ -193,14 +193,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
+        "x": 170,
         "y": 180,
         "wires": [
             [
@@ -213,7 +213,7 @@
         "type": "function",
         "z": "e9c4e2c510fb3a57",
         "name": "send-req",
-        "func": "var req_url = env.get(\"URL_GETUSR\");\nif (typeof req_url === \"undefined\") {\n    req_url = \"http://localhost:8080/user\"\n}\n\nvar d= new Date();\nvar seconds = d.getSeconds(); \n\nmsg.url = req_url + \"?id=\" +seconds*4;\n\nmsg.payload = null\n\n\nreturn msg;\n",
+        "func": "var req_url = env.get(\"URL_GETUSR\");\nif (typeof req_url === \"undefined\") {\n    req_url = \"http://localhost:8080/user\"\n}\n\nvar d= new Date();\nvar seconds = d.getSeconds(); \n\nmsg.url = req_url + \"?id=\" + seconds*4;\n\n//msg.payload = null\n\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -282,14 +282,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
+        "x": 190,
         "y": 160,
         "wires": [
             [
