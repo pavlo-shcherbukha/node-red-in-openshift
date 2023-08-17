@@ -12,3 +12,7 @@ logs
 .config.users.json.backup
 *.backup
 
+
+openshift/crt-secret.cmd 
+openshift/login.cmd 
+openshift/secret-github-basicauth.yaml 
