@@ -37,14 +37,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 230,
+        "x": 220,
         "y": 180,
         "wires": [
             [
@@ -193,7 +193,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "15",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -282,14 +282,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
+        "x": 180,
         "y": 160,
         "wires": [
             [
