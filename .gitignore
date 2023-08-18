@@ -13,6 +13,9 @@ logs
 *.backup
 
 
-openshift/crt-secret.cmd 
-openshift/login.cmd 
-openshift/secret-github-basicauth.yaml 
+#openshift/crt-secret.cmd 
+#openshift/login.cmd 
+#openshift/secret-github-basicauth.yaml 
+
+openshift/cred/secret-github-basicauth.yaml
+openshift/cred/login.cmd 
