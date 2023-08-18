@@ -111,7 +111,7 @@
         "type": "function",
         "z": "479e84300298cfa4",
         "name": "get-user-process-req",
-        "func": "var req_prm = msg.req.query \nvar errmsg={}\nif ( !req_prm.hasOwnProperty('id') ){\n    errmsg = {\n        errcode: \"ValidationError\", \n        message: \"Propery [id] is missing\"\n    }    \n    msg.payload = errmsg    \n    node.error(\"Propery [id]  is missing\", msg)\n} else if (parseInt(req_prm.id) < 100 || parseInt(req_prm.id)>200){\n    errmsg = {\n        errcode: \"ValueRangeError\",\n        message: \"Propery [id]  must be between 100 and 200\"\n    }\n    msg.payload = errmsg\n    node.error(\"Propery [id]   must be between 100 and 200\", msg)\n\n} else {\n    msg.payload={\n        id: req_prm.id,\n        fullname: \"Petro Petrenko\",\n        phone: \"222-33-44\"\n    }\n}\nreturn msg;",
+        "func": "var req_prm = msg.req.query \nvar errmsg={}\nif ( !req_prm.hasOwnProperty('id') ){\n    errmsg = {\n        errcode: \"ValidationError\", \n        message: \"Propery [id] is missing\"\n    }    \n    msg.payload = errmsg    \n    node.error(\"Propery [id]  is missing\", msg)\n} else if (parseInt(req_prm.id) < 100 || parseInt(req_prm.id)>200){\n    errmsg = {\n        errcode: \"ValueRangeError\",\n        message: \"Propery [id]  must be between 100 and 200\"\n    }\n    msg.payload = errmsg\n    node.error(\"Propery [id]   must be between 100 and 200\", msg)\n\n} else {\n    msg.payload={\n        id: req_prm.id,\n        fullname: \"Petro Petrenko\",\n        phone: \"222-33-44\"\n    }\n    return msg;\n}\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -121,7 +121,8 @@
         "y": 180,
         "wires": [
             [
-                "4e44139ccf447376"
+                "4e44139ccf447376",
+                "8fbccba3bd55d9a9"
             ]
         ]
     },
@@ -140,7 +141,8 @@
         "y": 320,
         "wires": [
             [
-                "4d019fafc2b9d9c9"
+                "4d019fafc2b9d9c9",
+                "143109f616fbb0dc"
             ]
         ]
     },
@@ -169,6 +171,38 @@
                 "a6a6eaa79d504e25"
             ]
         ]
+    },
+    {
+        "id": "8fbccba3bd55d9a9",
+        "type": "debug",
+        "z": "479e84300298cfa4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "143109f616fbb0dc",
+        "type": "debug",
+        "z": "479e84300298cfa4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "2f8e99faaa9eb085",
@@ -305,7 +339,7 @@
         "type": "function",
         "z": "5c88ce816ea858ab",
         "name": "del-user-process-req",
-        "func": "var req_prm = msg.req.query \nvar errmsg={}\nif ( !req_prm.hasOwnProperty('id') ){\n    errmsg = {\n        errcode: \"ValidationError\", \n        message: \"Propery [id] is missing\"\n    }    \n    msg.payload = errmsg    \n    node.error(\"Propery [id]  is missing\", msg)\n} else if (parseInt(req_prm.id) < 100 || parseInt(req_prm.id)>200){\n    errmsg = {\n        errcode: \"ValueRangeError\",\n        message: \"Propery [id]  must be between 100 and 200\"\n    }\n    msg.payload = errmsg\n    node.error(\"Propery [id]   must be between 100 and 200\", msg)\n\n} else {\n    msg.payload={\n        ok: true,\n        id: req_prm.id,\n        message: \"user deleted\"\n\n    }\n}\nreturn msg;",
+        "func": "var req_prm = msg.req.query \nvar errmsg={}\nif ( !req_prm.hasOwnProperty('id') ){\n    errmsg = {\n        errcode: \"ValidationError\", \n        message: \"Propery [id] is missing\"\n    }    \n    msg.payload = errmsg    \n    node.error(\"Propery [id]  is missing\", msg)\n} else if (parseInt(req_prm.id) < 100 || parseInt(req_prm.id)>200){\n    errmsg = {\n        errcode: \"ValueRangeError\",\n        message: \"Propery [id]  must be between 100 and 200\"\n    }\n    msg.payload = errmsg\n    node.error(\"Propery [id]   must be between 100 and 200\", msg)\n\n} else {\n    msg.payload={\n        ok: true,\n        id: req_prm.id,\n        message: \"user deleted\"\n\n    }\n    return msg;\n}\nreturn null;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
